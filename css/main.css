@@ -1,0 +1,451 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{font-family: 'NanumSquareRound';}
+
+
+/*#section0 메인 시작*/
+#section0{position: relative}
+#section0 .intro{font-size: 12px; bottom: 20px; left: 20px; position: absolute; }
+#section0 .intro a{color: #004181; transition: 0.2s}
+#section0 .intro a:hover{color: #ffffff}
+#section0 .caption{font-family: none}
+#section0 img{width: 300px; height: 300px; background-size: cover; background-position: center; top: 50%; left: 20%; transform: translate(-50%,-50%); position: absolute; }
+
+#section0 .scrollAni{}
+#section0 .scrollAni p{position: absolute; bottom: 20%; left: 49%; color: #0f0f0f; animation:mainColor 1.5s infinite}
+#section0 .scrollAni span:nth-child(2){display: block; width: 2px; height: 150px; background-color: #ffffff; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0%);}
+#section0 .scrollAni span:nth-child(3){display: block; width: 2px; height: 150px; background-color: azure; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0%); animation:mainAin 1.5s cubic-bezier(.27, .73, 1, 1) infinite }
+@keyframes mainColor{
+    100%{color: #b3d9ff; }
+}
+@keyframes mainAin{
+    100%{height: 0px; background-color: #0057af}
+}
+
+
+#section0 .stars{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)color: #fff;font-size: 50px;
+  animation: shine 2s linear infinite;
+}
+#section0 .stars1{position: absolute; top: 30%; left: 30%;font-size: 30px}
+#section0 .stars2{position: absolute; top: 30%; left: 80%;}
+#section0 .stars3{position: absolute; top: 50%; left: 20%;}
+#section0 .stars4{position: absolute; top: 60%; left: 70%;font-size: 30px}
+#section0 .stars5{position: absolute; top: 70%; left: 40%;}
+#section0 .stars6{position: absolute; top: 25%; left: 55%;
+font-size: 30px}
+#section0 .stars:before,
+#section0 .stars:after{position: absolute;
+  content: "*";color: #fff; z-index: 2;}
+#section0 .stars:before{
+  top: 0%;right: 0%;
+  animation: shine 2s linear infinite alternate-reverse;}
+
+#section0 .stars:after {
+  top: 1%;right: 1%;
+  animation: shine 1.5s linear infinite;
+}
+#section0 .stars:nth-child(2n):before {
+  top: 0%;right: 0%;
+  animation: shine 3s linear infinite alternate-reverse;}
+
+#section0 .stars:nth-child(2n):after {
+  top: 1%;right: 1%;
+  animation: shine 2.5s linear infinite;}
+@keyframes shine {
+  0%,
+  100% {color: #fff;}
+  50% { color: #8e9399;}
+}
+
+
+
+#section0 .container h1{font-size: 50px; color: rgb(80, 80, 80); text-align: center; position: fixed; top: 40%; left: 60%; transform: translate(-50%,-50%);  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 10px #fff, 0 0 5px #4BAAFB, 0 0 5px #4BAAFB; letter-spacing: 0.1em;  animation: SlideAni 2s forwards; width: 100% ;
+animation-name: SlideAni; animation-duration: 2s; animation-fill-mode: forwards;  animation-delay: 1.5s; opacity: 0}
+
+
+#section0 .container h1 span{font-size: 64px; color: transparent;
+            -webkit-text-stroke: 2px #3b3b3b;text-shadow: none;font-family: none;}
+
+#section0 .container .layer{width: 100%; height: 100vh; margin: auto}
+#section0 .container .layer:nth-child(1){background-image: url(../img/rainbow.png); width: 100%; height: 50vh; background-repeat: no-repeat; background-size: contain; background-position: center; position: absolute; margin-top: 4.5%; opacity: 0; animation: mainAni 2s forwards;
+ animation-name: mainAni; animation-duration: 1s; animation-fill-mode: forwards;}
+#section0 .container .layer:nth-child(2){background-image: url(../img/cloud.webp); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: contain; background-position: center;  margin-top: 2%;opacity: 0; animation: mainAni 2s forwards;
+animation-name: mainAni; animation-duration: 1s; animation-fill-mode: forwards;}
+
+#section0 .container .layer:nth-child(4){width: 100%; height: 100vh;}
+
+@keyframes mainAni{
+    100%{opacity: 1}
+}
+@keyframes SlideAni{
+    100%{left: 50%; opacity: 1}
+}
+ 
+
+/*#section1 About 시작*/
+#section1{}
+#section1>div{padding: 50px; width: 90%; height: 75%; background-color: rgba(255, 255, 255, 0.28); margin: auto; display: flex}
+#section1 div .Aboutleft{width: 40%; height: 100%; position: relative}
+#section1 div .Aboutleft .bg1{background-image: url(../img/chekback.jpg); width: 300px; height: 300px; background-size: cover; background-position: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-10deg); box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.48); }
+#section1 div .Aboutleft .bg2{background-image: url(../img/me4.png); width: 250px; height: 250px; background-size: cover; background-position: center; position: relative; top: 50%; left: 55%; transform: translate(-50%,-50%); transition: 0.2s}
+#section1 div .Aboutleft .bg1 .blink{display: inline-block;width: 10px; height: 10px; background: #fff; position: absolute; border-radius: 50%; 
+color: #fee; position: absolute;}
+#section1 div .Aboutleft .bg1 .blink::before{content: ''; width: 100%; height: 100%; border-radius: 50%; background: #9b00af; 
+        position: absolute;animation: dot 1s infinite;}
+@keyframes dot {100%{opacity: 1; transform: scale(2); opacity: 0;}}
+#section1 div .Aboutleft .bg1 .blink:nth-child(1){left: -5px; top: -5px}
+#section1 div .Aboutleft .bg1 .blink:nth-child(2){right: -5px; top: -5px}
+#section1 div .Aboutleft .bg1 .blink:nth-child(3){left: -5px; bottom: -5px}
+#section1 div .Aboutleft .bg1 .blink:nth-child(4){right: -5px; bottom: -5px;}
+
+
+#section1 div .Aboutright{width: 60%; height: 100%; padding: 55px 30px;}
+#section1 div .Aboutright .AboutrightTxt{font-size: 17px; font-weight: 500; display: flex; justify-content: space-around}
+#section1 div .Aboutright .AboutrightTxt span{display: inline-block; color: #9b00af; font-size: 14px; text-indent: 0.2em;   }
+#section1 div .Aboutright .AboutrightTxt p{margin-bottom: 0.5em; text-indent: 0.2em}
+.AboutTag{visibility: hidden; margin-top: 10px}
+.AboutTag > *{visibility: visible; }
+.AboutTag > *{transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;}
+.AboutTag:hover > *{ opacity: 0.4; transform: scale(0.9);}
+.AboutTag > *:hover{opacity: 1; transform: scale(1); transition-delay: 0ms, 0ms; border-radius: 30px; background-color: #9a00eb}
+.AboutTag a:nth-child(2n):hover{background-color: #9a00eb; color: #fff; }
+.AboutTag a:nth-child(2n-1):hover{background-color: #7bccff; color: #fff; }
+
+.AboutTag{display: flex; flex-wrap: wrap;}
+.AboutTag > *{background-color: #fff; padding: 10px; flex: auto; text-align: center; font-size: 20px; margin: 5px; transition: 0.6s; }
+
+#section1 .click{color: #fff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 10px #fff, 0 0 5px #9a00eb, 0 0 5px #9a00eb;font-size: 14px; text-align: center; margin-top: 20px; animation: click 1s linear infinite; letter-spacing: 0.2em; }
+@keyframes click {
+    50%{opacity: 0.6; margin-top: 18px}
+    100%{opacity: 1; margin-top: 20px}
+}
+
+
+.AboutTagHeart>div{background-size: contain; background-position: center; background-repeat: no-repeat; transition: 0.5s all ease-in; transform: scale(0);}
+.AboutTagHeart>div p{font-size: 18px; text-align: center; margin-top:  25%; padding: 10px; text-shadow: 1px 1px 1px #000; color: #fff}
+.AboutTagHeart div:nth-child(1){background-image: url(../img/HR.png); width: 200px; height: 200px; position: absolute; top: 10%; right: 10%;filter: drop-shadow(2px 2px 2px) }
+.AboutTagHeart div:nth-child(2){background-image: url(../img/HP.png); width: 180px; height: 150px; position: absolute; top: 40%; left: 35%; filter: drop-shadow(2px 2px 2px);background-size: contain;}
+.AboutTagHeart div:nth-child(3){background-image: url(../img/HO.png); width: 180px; height: 180px; position: absolute; bottom: 40%; right: 20%; filter: drop-shadow(2px 2px 2px);background-size: cover;}
+.AboutTagHeart div:nth-child(3) p{margin-top:  35%;}
+.AboutTagHeart div:nth-child(4){background-image: url(../img/HR.png); width: 180px; height: 180px; position: absolute; bottom: 33%; left: 18%; filter: drop-shadow(2px 2px 2px);background-size: contain;}
+.AboutTagHeart div:nth-child(5){background-image: url(../img/HP2.png); width: 150px; height: 150px; position: absolute; bottom: 40%; right: 15%; filter: drop-shadow(2px 2px 2px);background-size: cover; }
+.AboutTagHeart div:nth-child(5) p{margin-top:  35%;}
+.AboutTagHeart div:nth-child(6){background-image: url(../img/HO.png); width: 150px; height: 150px; position: absolute; top: 20%; right: 30%; filter: drop-shadow(2px 2px 2px);background-size: cover; }
+.AboutTagHeart div:nth-child(6) p{margin-top:  30%;}
+.AboutTagHeart div:nth-child(7){background-image: url(../img/HP.png); width: 120px; height: 120px; position: absolute; border: 20%; right: 30%; filter: drop-shadow(2px 2px 2px);background-size: cover; }
+.AboutTagHeart div:nth-child(8){background-image: url(../img/HO.png); width: 170px; height: 170px; position: absolute; top: 20%; left: 30%; filter: drop-shadow(2px 2px 2px);background-size: cover; }
+.AboutTagHeart div:nth-child(8) p{margin-top:  30%;}
+.AboutTagHeart div:nth-child(9){background-image: url(../img/HR.png); width: 210px; height: 210px; position: absolute; top: 20%; right: 40%; filter: drop-shadow(2px 2px 2px);background-size: contain; }
+.AboutTagHeart div:nth-child(9) p{margin-top:  35%;}
+.AboutTagHeart div:nth-child(10){background-image: url(../img/HO.png); width: 150px; height: 150px; position: absolute; top:40%; left: 5%; filter: drop-shadow(2px 2px 2px);background-size: cover; }
+
+
+.AboutTagHeart .on{animation: HeartAni 0.6s forwards}
+@keyframes HeartAni{
+    40%{transform: scale(1.4);}
+    80%{transform: scale(0.9);}
+    100%{transform: scale(1);}
+}
+/*section2 스킬*/
+#section2{}
+#section2 .fish{font-size: 30px; position: absolute; top: 70%; left: 50%; z-index: 99; opacity: 0}
+#section2 .fish.on{animation:fishiAni 10s infinite; opacity: 0.8;
+}
+@keyframes fishiAni{
+    0%{transform: translateY(-10px);}
+    10%{left:45%;}
+    25%{transform: translateY(10px);}
+    50%{transform: translateY(-10px);left:40%;}
+    75%{transform: translateY(10px);}
+    100%{transform: translateY(0) ;left:30%; }
+}
+#section2 .fish2{font-size: 30px; position: absolute; top: 80%; left: 80%; z-index: 99; opacity: 0; transform: rotate(180deg)}
+#section2 .fish2.on2{animation:fishiAni2 14s infinite; opacity: 0.8; }
+@keyframes fishiAni2{
+    0%{transform: translateY(-10px);}
+    10%{left:75%;;}
+    25%{transform: translateY(10px);}
+    50%{transform: translateY(-10px);left:60%;}
+    75%{transform: translateY(0px); }
+    100%{transform: translateY(10px);left:40%;}
+}
+#section2 h2{z-index: 99; position: relative}
+#section2 .wave-wrap{position: absolute;
+    top: 0;bottom: 0; left: 0;right: 0;}
+#section2 .wave-wrap .unit{position: absolute;
+    top: 0;bottom: 0;left: 0; right: 0;
+    background: rgb(152, 211, 243);transform: translateY(100%);
+    transition: transform 0.5s ease-in-out; }
+#section2 .wave-wrap .unit .wave{height: 60px;background: rgb(182, 228, 254); }
+#section2 .wave-wrap .unit .wave::before,
+#section2 .wave-wrap .unit .wave::after{
+    content: '';position: absolute;left: 0;
+    width: 4800px;height: 60px; background: url(../img/bg_wave.png) 0 0;background-size: 2400px 60px; opacity: .1; }
+#section2 .wave-wrap .unit .wave::before{animation: ani_wave1 3s linear infinite;}
+@keyframes ani_wave1{
+    0%{background-position: 0 0;}
+    100%{background-position: -2400px 0;}
+}
+#section2 .wave-wrap .unit .wave::after{animation: ani_wave2 5s linear infinite;}
+@keyframes ani_wave2{
+    0%{background-position: -500px 0;}
+    100%{background-position: -2900px 0;}
+}
+
+#section2 .wave-wrap .unit .num{ font-size: 60px; color: #fff;
+    opacity: 0.5;margin-left: 30px; display: block; animation:ani-num 3s linear infinite;}
+@keyframes ani-num{
+    0%{transform: translateY(0);}
+    25%{transform: translateY(-10px);}
+    50%{transform: translateY(0);}
+    75%{transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}
+#section2 .wave-wrap .unit .num > strong{font-size: 90px;}
+#section2 .link-wrap{position: absolute; right: 160px;
+    bottom:50px;text-align: right;  width: 220px}
+#section2 .link-wrap .link-unit .btn{ font-size: 35px; font-weight: bold; color: #2d3a42;height: 70px;line-height: 70px;  overflow-y: hidden; display: block; z-index: 999}
+#section2 .link-wrap .link-unit .btn:hover{ color: #fff;}
+#section2 .link-wrap .link-unit a{position: relative; display: block; }
+#section2 .link-wrap .link-unit img{width: 30px; height: 30px; display: inline; position: relative; top: 18px; left: 0px;  line-height: 70px; float: right; margin-left: 10px}
+#section2 .link-unit a span{display: inline-block; font-size: 14px}
+
+#section2 .skillExplain{width: 800px; height: 200px;  position: absolute; top: 65%; left: 45%; transform: translate(-50%,-50%)}
+#section2 .skillExplain li{position: absolute;transform: translateY(95px); transition: 0.4s; opacity: 0; text-align: center}
+#section2 .skillExplain li.active{transform: translateY(0); opacity: 1;  }
+#section2 .skillExplain li p{font-size: 16px;}
+#section2 .skillExplain li p span{font-size: 16px; display: inline-block; color: rgb(0, 87, 134)}
+/*section2 스킬 끝*/
+
+/*section3 포트폴리오 시작*/
+#section3{}
+#section3 .pContainer{width: 100%; height: 80%; display: flex; justify-content: space-around;  align-items: center}
+
+
+
+
+
+
+
+/*포트폴리오 .pContainer .pText 설명*/
+#section3 .pContainer .flex{width: 36%; height: 100%; padding: 10px 0 0 100px}
+#section3 .pContainer .pText{width: 100%; height: 40%;}
+
+#section3 .pContainer .pText .slideView{position: relative; height: 100%; width: 100%; overflow: hidden; }
+#section3 .pContainer .pText .slideView div{position: absolute;  width: 100%; left: 100%; padding: 30px }
+#section3 .pContainer .pText .slideView div:nth-child(1){left: 0}
+
+
+#section3 .pContainer .pText *{margin-bottom: 2em; color: #fff; text-shadow: 2px 2px 5px black; font-weight: bold; z-index: 99}
+#section3 .pContainer .pText .text{font-size: 16px;letter-spacing: -1em; margin-top: 15px}
+#section3 .pContainer .pText .text.on{font-size: 16px; letter-spacing: 0em; transition: 1s}
+#section3 .pContainer .pText h1{font-size: 46px; letter-spacing: -1em; margin-bottom: 1em; transition: 1s}
+#section3 .pContainer .pText h1.on{letter-spacing: 0.4em; transition: 1s}
+
+
+#section3 .pContainer .pText button{border: 3px solid #fff; padding: 15px 40px; font-size: 16px; text-align: center; background-color: transparent;  transition: 0.2s; cursor: pointer;margin-bottom: 0; z-index: 9999; position: absolute; top: 30px; right: 10px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.32); border-radius: 15px;}
+#section3 .pContainer .pText button:hover{background-color: #fff;  border-radius: 5px}
+
+
+/*탭*/
+
+#section3 .pContainer .pText2{width: 100%; height: 60%; position: relative; }
+
+#section3 .pContainer .pText2 .slideView2{position: relative; height: 100%; width: 100%; overflow: hidden}
+#section3 .pContainer .pText2 .slideView2 .con2{position: absolute; height: 100%; width: 90%; left: 100%; margin-left: 8% }
+#section3 .pContainer .pText2 .slideView2 .con2:nth-child(1){left: 0}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab{height: 220px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabTitle{width: 100%; height: 40px; display: flex; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabTitle li{width: 50%; height: 41px; text-align: center; line-height: 40px; z-index: 99999; cursor: pointer; 
+color: #fff; text-shadow: 1px 1px 2px black; font-size: 16px;
+   background:rgb(186, 230, 255);}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabTitle li.on{background-color:#fff; color: #484848; text-shadow: 1px 1px 2px #c3c3c3; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabTitle 
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabTitle li:active{background-color: rgb(124, 124, 124); color: #000}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont{width: 100%; height: 100%;  background:#fff; padding: 20px 13px; z-index: 999999;  font-size: 20px; color: #383838;  font-weight: 55; letter-spacing: 0.05em; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.29); font-weight: 500; color: #3e3e3e; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont0{padding: 15px 13px;}
+
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont p{text-indent: 0.5em; font-size: 14px; margin-bottom: 0.2em}
+
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont div:nth-child(2) p:nth-child(1){color: rgb(0, 107, 168); margin-bottom: 1em; font-size: 14px}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont div:nth-child(2) p{font-size: 12px}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .html{background-color: #80ea80; border-radius: 20px; text-align: center; padding: 3px; width: 70px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .css{background-color: #eeb3ff; border-radius: 20px; text-align: center; padding: 3px; width: 70px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .illu{background-color: #ffd167; border-radius: 20px; text-align: center; padding: 3px; width: 90px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .photo{background-color: #95deff; border-radius: 20px; text-align: center; padding: 3px; width: 95px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .js{background-color: #ffe200; border-radius: 20px; text-align: center; padding: 3px; width: 100px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont .jq span{background-color: #ffb550; border-radius: 20px; text-align: center; padding: 3px; width: 70px; margin-left: -5px; display: inline-block}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont0 div:nth-child(2){padding: 5px 20px; }
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont1 div:nth-child(2){padding: 15px 20px}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont2 div:nth-child(2){padding: 15px 20px}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont3 div:nth-child(2){padding: 10px 20px}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont0 div:nth-child(2) .inner{width: 100px; height: 100px; display: block; position: absolute; top: 100px; right: 70px; background-image: url(../img/logoflower.png); background-repeat: no-repeat; background-position: center; background-size: cover}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont1 div:nth-child(2) .inner{width: 100px; height: 100px; display: block; position: absolute; top: 100px; right: 70px; background-image: url(../img/spo_bank2.png); background-repeat: no-repeat; background-position: center; background-size: cover}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont2 div:nth-child(2) .inner{width: 130px; height: 130px; display: block; position: absolute; top:80px; right: 70px; background-image: url(../img/logo-header.svg); background-repeat: no-repeat; background-position: center; background-size: contain}
+#section3 .pContainer .pText2 .slideView2 .con2 .tab .tabCont3 div:nth-child(2) .inner{width: 100px; height: 100px; display: block; position: absolute; top: 100px; right: 70px; background-image: url(../img/starbucks.png); background-repeat: no-repeat; background-position: center; background-size: cover}
+
+
+/*포트폴리오 .pContainer .pCont 모니터화면*/
+#section3 .pContainer .pCont{width: 65%; height: 100%; }
+#section3 .pContainer .pCont .pComputer{width: 100%; height:100%; background-image: url(../img/moniter.png); background-size: contain; background-repeat: no-repeat; background-position: center; }
+#section3 .pContainer .pCont .pComputer .slideView2{position: relative; width: 75%; height: 70%; margin:0 auto; top: 5%; overflow: hidden; }
+#section3 .pContainer .pCont .pComputer .slideView2 div{position: absolute; width: 100%; height: 100%; margin:0 auto; left: 100%;
+cursor: pointer}
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(1){background-image: url(../img/sc1.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99;left: 0}
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(2){background-image: url(../img/sc2.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99;}
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(3){background-image: url(../img/sc3.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99; }
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(4){background-image: url(../img/sc44.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99; }
+
+#section3 .pContainer .pCont .pComputer .slideView2 div:hover{background-position: bottom; transition: 7s linear}
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(1):hover{background-position: bottom; transition: 10s linear}
+#section3 .pContainer .pCont .pComputer .slideView2 div:nth-child(3):hover{background-position: bottom; transition: 16s linear}
+
+/*포트폴리오배경*/
+#section3 .pBg{width: 100%; height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; position: absolute; top: 0;left: 0;  overflow: hidden}
+#section3 .pBg .slideViewBg div{ width: 100%; height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute;top: 0;left: 0; z-index: -9; }
+
+#section3 .pBg .slideViewBg div:nth-child(1){background: linear-gradient( rgba(175, 175, 175, 0.19), rgba(255, 255, 255, 0.49) ), url('../img/bg0.jpg');width: 100%; height: 100vh;background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute;top: 0;left: 0; z-index: -9; display: block}
+
+#section3 .pBg .slideViewBg div:nth-child(2){background: linear-gradient( rgba(95, 95, 95, 0.31), rgba(255, 255, 255, 0.24) ), url('../img/bg2.jpg'); width: 100%; height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top: 0;left: 0; z-index: -9;}
+
+#section3 .pBg .slideViewBg div:nth-child(3){width: 100%; height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top: 0;left: 0; z-index: -9;}
+#section3 .pBg .slideViewBg div:nth-child(3) video{width: 100%;  background-size: contain; background-repeat: no-repeat; background-position: center; position: absolute; top: 0;left: 0; z-index: -9;}
+
+#section3 .pBg .slideViewBg div:nth-child(4){background: linear-gradient( rgba(95, 95, 95, 0.31), rgba(255, 255, 255, 0.24) ), url('../img/bg4.png'); width: 100%; height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top: 0;left: 0; z-index: -9;}
+
+
+/*포트폴리오 현재번호*/
+#section3 .numIndicator{position: absolute; font-size: 20px; color: #fff; top: 87%; left: 89.5%; transform: translate(-50%,-50%); display: flex; justify-content: center; align-items: center; text-align: center;text-shadow: 2px 2px 5px black; z-index: 99}
+#section3 .numIndicator .current{margin: 4px 8px 0 0}
+#section3 .numIndicator .allNum{}
+
+/*포트폴리오 prev,next 버튼*/
+#section3 .indicator{width: 120px; height: 50px; position: absolute; bottom: 30px; right: 100px; display: flex; justify-content: space-around; z-index: 9999}
+#section3 .indicator .prev{width: 50px; height: 50px; background-image: url(../img/prev.gif); background-size: cover; background-position: center; background-repeat: no-repeat; transition: 0.2s; z-index: 9999; cursor: pointer}
+#section3 .indicator .prev:hover{background-image: url(../img/prevhover.gif);width: 50px; height: 50px;background-size: cover; background-position: center; background-repeat: no-repeat;}
+#section3 .indicator .next{width: 50px; height: 50px; background-image: url(../img/next.svg); background-size: cover; background-position: center; background-repeat: no-repeat; transition: 0.2s; z-index: 9999; cursor: pointer}
+#section3 .indicator .next:hover{width: 50px; height: 50px; background-image: url(../img/nexthover.gif); background-size: cover; background-position: center; background-repeat: no-repeat;}
+
+.line{width: 8px; height: 300px;position: absolute; top: 50%; left: 5%; background-color: rgba(0, 0, 0, 0.38); transform: translate(-50%,-50%); border-radius: 50px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45)}
+.line .pLine{width: 8px; height: 0px;position: absolute; top:0%; left: 0%; background-color: rgb(255, 255, 255); border-radius: 50px;}
+
+/*포트폴리오 아이패드, 모바일*/
+
+#section3 .pResponsive{width: 100%; height: 100vh; top: 0;left: 0;  position: absolute;}
+#section3 .pResponsive .slideViewBg2{}
+#section3 .pResponsive .res3{width: 100%; height: 100vh; top: 0;left: 0;  position: absolute;}
+#section3 .pResponsive .res3 .pad{position: absolute; width: 95%; height: 95vh; bottom: 0; left: 15%; display: block}
+#section3 .pResponsive .res3 .padImg{background-image: url(../img/ipad.png); width: 35%; height: 50%; position: absolute; bottom: 0; left: 20%; background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 99}
+#section3 .pResponsive .res3 .padImg .padImgInner{width: 72%; height: 78%;  margin: 3% 0 0 15%; } 
+#section3 .pResponsive .res3 .padImg .padImgInner div{background-image: url(../img/scP.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99; cursor: pointer} 
+#section3 .pResponsive .res3 .padImg .padImgInner div:hover{background-position: bottom; transition: 20s linear}
+
+#section3 .pResponsive .res3 .phone{position: absolute; width: 100%; height: 100vh;; bottom: 0; left: 0; display: block}
+#section3 .pResponsive .res3 .phoneImg{background-image: url(../img/iphone.png); width: 28%; height: 55%; position: absolute; bottom: 0; right: -4.5%; background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 99}
+#section3 .pResponsive .res3 .phoneImg .phoneImgInner{width: 37%; height: 67%;  margin: 11% 0 0 31.5%; } 
+#section3 .pResponsive .res3 .phoneImg .phoneImgInner div{background-image: url(../img/scM.png); width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: top; z-index: 99; cursor: pointer} 
+#section3 .pResponsive .res3 .phoneImg .phoneImgInner div:hover{background-position: bottom; transition: 20s linear}
+
+
+
+
+/*section3 포트폴리오 끝*/
+
+
+
+
+
+/*section5 마지막*/
+#section5{position: relative;}
+#section5 h4{color: #555555; font-size: 16px; text-align: center; margin: auto;  text-shadow: 2px 2px 2px #fff; z-index: 9; position: relative; top: 10%; transform: translateY(-50%); line-height: 26px}
+#section5 .myInfo span{display: inline-block; width: 1px; height: 3px; background-color: rgb(255, 255, 255); top: 20px; left: 28px; position: absolute; }
+#section5 .myInfo{width: 500px; height: 500px; border-radius: 50%; position: absolute; top: -200px; left: -200px; transition: 0.2s; background:rgba(255,255,255,0.6);box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)}
+#section5 .myInfo .infoInner{ position: absolute; top: 50%; left: 50%; }
+#section5 .myInfo p{font-size: 16px; z-index: 999; color: #000}
+#section5 img{width: 300px; height: 300px; background-size: cover; background-position: center; top: 60%; left: 70%; transform: translate(-50%,-50%); position: absolute; -webkit-backdrop-filter: saturate(80%);box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); border-radius: 20px}
+#section5 .myInfo .infoInner img{position: absolute; width: 120px; height: 120px; top: 140px; left: 70px; box-shadow: none}
+#section5 .myInfo .infoInner .me{position: absolute; width: 120px; height: 120px; top: 80px; left: 0px; box-shadow: none; background-image: url(../img/me7.png); background-size: cover; background-repeat: no-repeat; background-position: center; transition: 0.2s}
+
+
+#section5 .ContactInner{display: flex;  width: 100%; height: 500px; align-items: center; margin-top: 30px}
+#section5 .ContactInner .ContactLeft{width: 50%; position: relative; }
+#section5 .ContactInner .ContactLeft p{color: #fff; font-size:14px; font-weight: bold; position: absolute; margin-top: 2px; left: 71%; z-index: 99 ; text-shadow: 2px 2px 2px #4a4a4a; transform: skewY(7deg)}
+
+#section5 .ContactInner .ContactRight{width: 400px; position: relative; min-height: 400px; background:rgba(255,255,255,0.2); border-radius: 10px; display: flex; justify-content: space-around; align-items: center; backdrop-filter:blur(5px); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)}
+#section5 .ContactInner .ContactRight .form{position: relative; width: 100%; height: 100%; padding: 40px; }
+#section5 .ContactInner .ContactRight .form .inputBox{width: 100%; margin-top: 20px; }
+#section5 .ContactInner .ContactRight .form .inputBox input{width: 100%; background:rgba(255,255,255,0.2); border: none; outline: none; padding: 10px 20px; border-radius: 35px; font-size: 16px; color: #000; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); margin: 0 auto; transition: 0.2s}
+#section5 .ContactInner .ContactRight .form .inputBox input:hover{box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); cursor: pointer}
+#section5 .ContactInner .ContactRight .form input[type="submit"]{background: #fff; color: #666; max-width: 100px; cursor: pointer; margin-bottom: 20px; font-weight: 600; position: relative; left: 50%; transform: translateX(-50%); transition: 0.4s;}
+#section5 .ContactInner .ContactRight p{color: #00599b; text-align: center; font-size: 11px}
+
+#section5 .square{position: absolute; backdrop-filter:blur(5px); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); background:rgba(255,255,255,0.2); width: 100px; height: 100px; border-radius: 20px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#section5 .square:nth-child(1){top: 0%; left: 100%; animation:contactAni 4s ease-in-out infinite; }
+#section5 .square:nth-child(2){top:90%; left: 100%; width: 150px; height: 150px; animation:contactAni2 3s ease-in-out infinite; }
+#section5 .square:nth-child(3){top:40%; left: 0%; animation:contactAni3 4s ease-in-out infinite;}
+#section5 .contactSns{width: 200px; height: 200px; border-radius: 50%; position: absolute; bottom: -100px; right: -100px; transition: 0.2s; background:rgba(255, 255, 255, 0.35); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+#section5 .contactSns ul{}
+#section5 .contactSns ul li{position: absolute; backdrop-filter:blur(5px); 5px 5px 10px rgba(0, 0, 0, 0.2);background:rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 10px; font-size: 30px; text-align: center; line-height: 45px; z-index: 99; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);}
+#section5 .contactSns ul li:nth-child(1){top: 40px; left: -10px; animation:contactAni4 2.5s linear infinite; }
+#section5 .contactSns ul li:nth-child(2){top: -10px; left: 40px;
+animation:contactAni5 2.5s linear infinite;}
+#section5 .contactSns ul li:nth-child(1):hover{ background: linear-gradient(135deg, rgba(255, 246, 0, 0.77),rgba(255, 0, 96, 0.8),rgba(108, 0, 255, 0.78));}
+#section5 .contactSns ul li:nth-child(2):hover{background-color: #ffd800}
+#section5 .contactSns ul li:nth-child(2) div{background-image: url(../img/kakaotalk.svg); background-size: contain; background-position: center; background-repeat: no-repeat; width: 30px; height: 30px;margin: 5px 0 0 5px; }
+
+#section5 .contactSns2{width: 200px; height: 200px; border-radius: 50%; position: absolute; top: -100px; right: -100px; transition: 0.2s; background:rgba(255, 255, 255, 0.35); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+#section5 .contactSns2 ul{}
+#section5 .contactSns2 ul li{position: absolute; backdrop-filter:blur(5px); 5px 5px 10px rgba(0, 0, 0, 0.2);background:rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 10px; font-size: 30px; text-align: center; line-height: 45px; z-index: 99; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); cursor: pointer}
+#section5 .contactSns2 ul li:nth-child(1){bottom: 40px; left: -10px; animation:contactAni4_1 2.5s linear infinite; }
+#section5 .contactSns2 ul li:nth-child(2){bottom: -10px; left: 40px;
+animation:contactAni5_1 2.5s linear infinite; }
+#section5 .contactSns2 ul li:nth-child(1):hover{ background-color: #00d800;}
+#section5 .contactSns2 ul li:nth-child(2):hover{background-color: #fff}
+#section5 .contactSns2 ul li:nth-child(1) div{background-image: url(../img/blog.png); background-size: contain; background-position: center; background-repeat: no-repeat; width: 30px; height: 30px;margin: 5px 0 0 5px; }
+#section5 .contactSns2 ul li:nth-child(2) div{background-image: url(../img/git.svg); background-size: contain; background-position: center; background-repeat: no-repeat; width: 30px; height: 30px;margin: 5px 0 0 5px; }
+
+#section5 .ContactInner .ContactRight .form .inputBox input.focus{background-color: lavender; transition: 0.4s; }
+#section5 .ContactInner .ContactRight .form input[type="submit"]:hover{background-color: lavender; border-radius: 10px}
+
+#section5 .myprofile{width: 200px; height: 200px; position: absolute; top: 60%; left: 7%; transform: translate(-50%,-50%); }
+#section5 .myprofile div{ backdrop-filter:blur(5px); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); background:rgba(255,255,255,0.2); width: 120px; height: 40px; border-radius: 20px; margin: 20px; transition: 0.2s; }
+#section5 .myprofile div p{font-size: 14px; text-align: center; padding: 13px 0; }
+#section5 .myprofile div:hover{background-color: lavender; cursor: pointer; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);border-radius: 10px; }
+#section5 .myprofile div:nth-child(1){}
+#section5 .myprofile div:nth-child(2){}
+
+@keyframes contactAni{
+    50%{top: 8%;}
+    100%{top: 0%;}
+}
+@keyframes contactAni2{
+    50%{top: 96%;}
+    100%{top: 90%;}
+}
+@keyframes contactAni3{
+    50%{top: 47%;}
+    100%{top: 40%;}
+}
+@keyframes contactAni4{
+    50%{top: 45px; left: -5px}
+    100%{top:40px; left: -10px}
+}
+@keyframes contactAni5{
+    50%{top: -5px; }
+    100%{top:-10px; }
+}
+@keyframes contactAni4_1{
+    50%{bottom: 45px; left: -5px}
+    100%{bottom:40px; left: -10px}
+}
+@keyframes contactAni5_1{
+    50%{bottom: -5px; }
+    100%{bottom:-10px; }
+}
