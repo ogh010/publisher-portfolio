@@ -1,46 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>오가희 포트폴리오 인트로</title>
-    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/intro.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-    #intro{ background: rgb(154, 218, 255);position: relative; width: 100%; height: 100vh; overflow: hidden; padding: 130px 110px; 
-background-image: url(./img/mainBG.jpg); width: 100%; height: 100vh; background-size: cover; background-position: center;
-backdrop-filter: drop-shadow(4px 4px 10px #505050);}
+      #intro {
+        background: rgb(154, 218, 255);
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        padding: 130px 110px;
+        background-image: url(./img/mainBG.jpg);
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: drop-shadow(4px 4px 10px #505050);
+      }
     </style>
-</head>
-<body scroll="no">
-   <div id="intro">
-        <img src="./img/arrow.png" alt="화살표" class="arrow">
-        <h1>반갑습니다 !!! <span class="handShake">👋</span></h1>
-        <h2><span>오</span>늘 처음 뵙겠습니다!</h2>
-        <h2><span>가</span>장 뛰어난 인재가 되기 위해 오늘도 열심히 생각하고 분석합니다.</h2>
-        <h2><span>희</span>망을 가진 사람들은 다릅니다. 희망만으로도 인생의 방향을 180도 바꿀 수도 있습니다. 할 수 있다<br>는 마음가짐으로 오늘도 열심히 목표를 쫓는 저는, <span>오가희</span>입니다.</h2>
-        <div class="me"></div>
-        <button type="button"><a href="index.html">포트폴리오<br>보러가기</a></button>
-        <div class="btnClick">
-            <span>🌠</span>
-        </div>
-        <div class="mask"></div>
+  </head>
+  <body scroll="no">
+    <div id="intro">
+      <img src="./img/arrow.png" alt="화살표" class="arrow" />
+      <h1>반갑습니다 !!! <span class="handShake">👋</span></h1>
+      <h2><span>오</span>늘 처음 뵙겠습니다!</h2>
+      <h2>
+        <span>가</span>장 뛰어난 인재가 되기 위해 오늘도 열심히 생각하고
+        분석합니다.
+      </h2>
+      <h2>
+        <span>희</span>망을 가진 사람들은 다릅니다. 희망만으로도 인생의 방향을
+        180도 바꿀 수도 있습니다. 할 수 있다<br />는 마음가짐으로 오늘도 열심히
+        목표를 쫓는 저는, <span>오가희</span>입니다.
+      </h2>
+      <div class="me"></div>
+      <button type="button">
+        <a href="./index.html">포트폴리오<br />보러가기</a>
+      </button>
+      <div class="btnClick">
+        <span>🌠</span>
+      </div>
+      <div class="mask"></div>
     </div>
-    
+
     <script>
-    const mask = document.querySelector(".mask");
-        window.onmousemove = function(e){
-            const x = e.clientX;
-            mask.style.left = x + 'px';
-        }
-        $(function(){
-            $('button').mouseover(function(){
-                $('.me').css({"background-image":"url(./img/intro_me2.png)"});
-                $('.btnClick span').eq(0).addClass("on")
-            }).mouseout(function(){
-                $('.me').css({"background-image":"url(./img/intro_me.png)"});
-                $('.btnClick span').eq(0).removeClass("on")
-            })
-        })
+      const mask = document.querySelector('.mask');
+      window.onmousemove = function (e) {
+        const x = e.clientX;
+        mask.style.left = x + 'px';
+      };
+      $(function () {
+        $('button')
+          .mouseover(function () {
+            $('.me').css({ 'background-image': 'url(./img/intro_me2.png)' });
+            $('.btnClick span').eq(0).addClass('on');
+          })
+          .mouseout(function () {
+            $('.me').css({ 'background-image': 'url(./img/intro_me.png)' });
+            $('.btnClick span').eq(0).removeClass('on');
+          });
+      });
     </script>
-</body>
+  </body>
 </html>

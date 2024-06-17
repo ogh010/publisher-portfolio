@@ -1,659 +1,646 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>gahee's portfolio</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!--pagination사용하려면 낮은 버전 써야함..-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" href="./img/me6.png" type="image/x-icon" />
     <script src="./js/jquery-3.6.0.min.js"></script>
-    
-    
+
     <script src="./js/jquery-ui.js"></script>
     <script src="./js/myscript.js"></script>
     <script src="./js/parallax.min.js"></script>
-    
-    <style>
-        
-        body{background-color: #fff; overflow: hidden; background-image: url(./img/bbg.webp); width: 100%; height: 100vh; background-size: cover; background-position: center; -webkit-backdrop-filter: brightness(1000px);  }
-
-        /*swiper-container*/
-        .swiper-container { width: 100%; height: 100vh; }
-        
-        /*swiper-wrapper*/
-        .swiper-wrapper{transition-delay: .4s}
-        
-        /*swiper-slide*/
-        .swiper-slide{overflow: hidden; transition: all cubic-bezier(.57,.01,.45,1.03) 0.4s}
-        .swiper-slide:nth-child(1){background-color: #FFC3C3; background: linear-gradient(#ffe7e7 6%, #ffd9d9 61%, #FFC3C3 72%);
-        background: rgba(203, 236, 255, 0);  }
-        .swiper-slide:nth-child(2){background-color: #ffdbbc;
-        background: linear-gradient(#ffdbbc 6%, #fdf4ba 39%, #fefcd3 88%, #fffee8 100%);
-        background:rgba(255, 255, 255, 0.49);}
-        .swiper-slide:nth-child(3){background-color: #FFF5C3;
-        background-color: lavender;}
-        .swiper-slide:nth-child(4){background-color: #CBFFC3;
-        background: linear-gradient(#d3ffd6 6%, #CBFFC3 39%, #cef5fc 88%, #C3F8FF 100%);
-        background:rgb(203, 236, 255);}
-        .swiper-slide:nth-child(5){background-color: #C3F8FF;
-        background: linear-gradient(#a2e0f9 6%, #cef5fc 39%, #e1faff 70%, #f8e8ff 88%, #f6e3ff 100%);
-        background: rgba(255, 255, 255, 0.2);}
-        .swiper-slide:nth-child(6){background-color: #e19cff;
-        background: linear-gradient(#f6e3ff 6%, #eecbff 51%, #edc2ff 62%, rgba(65, 65, 65, 0.09) 100%);
-        background:rgba(255, 255, 255, 0.2);}
-        .swiper-slide h2{color: #fff; font-size: 60px; text-align: center; margin: auto; padding: 20px 0 0 0; text-shadow: 2px 2px 2px gray; z-index: 9}
-        .swiper-slide h3{color: #fff; font-size: 16px; text-align: center; margin: auto;  text-shadow: 2px 2px 2px gray;padding: 0 0 10px 0; z-index: 9; position: relative; pointer-events: none}
-        
-        /*swiper-pagination*/
-        .swiper-container-vertical>.swiper-pagination-bullets {right: 50px;top: 50%;
-    -webkit-transform: translate3d(0,-50%,0); transform: translate3d(0,-50%,0);}
-        .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
-        margin: 30px 0;display: block; width: 10px; height: 10px; line-height: 10px}
-        .swiper-pagination{text-align: right}
-        .swiper-pagination-bullet:hover{background-color: #fff;}
-        .swiper-pagination-bullet-active:nth-child(1){background-color: #9b00af; transform: scale(1.5); box-shadow: 1px 1px 2px gray}
-        .swiper-pagination-bullet-active:nth-child(2){background-color: #0057af; transform: scale(1.5); box-shadow: 1px 1px 2px gray }
-        .swiper-pagination-bullet-active:nth-child(3){background-color: #9b00af; transform: scale(1.5); box-shadow: 1px 1px 2px gray }
-        .swiper-pagination-bullet-active:nth-child(4){background-color: #0057af; transform: scale(1.5); box-shadow: 1px 1px 2px gray }
-        .swiper-pagination-bullet-active:nth-child(5){background-color: #9b00af; transform: scale(1.5); box-shadow: 1px 1px 2px gray }
-        .swiper-pagination-bullet-active:nth-child(6){background-color: #0057af; transform: scale(1.5); box-shadow: 1px 1px 2px gray;}
-        .swiper-pagination-bullet>span{ display: inline-block; width: 100px; font-size: 14px; position: absolute; right: 30px; opacity: 0;transition: 0.2s;}
-        .swiper-pagination-bullet{width: 8px;height: 8px; display: inline-block; border-radius: 100%; background: #6c6c6c;opacity: .5;
-        transition: 0.2s}
-        
-        .swiper-slide img{position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 2; width: 300px; height: 300px; top: -50%}
-        .caption{position: absolute; left: 0; right: 0; text-align: center; top: 40%; display: flex; flex-wrap: nowrap}
-        .caption h1{padding: 0 25px; position: relative; font-size: 100px; color: #fff; white-space: nowrap; font-weight: 100;
-        animation:  infiniteText 10s linear infinite}
-        @keyframes infiniteText{
-            0%{transform: translateX(0)}
-            100%{ transform: translateX(-50%) }
-        }
-        .clone{position: absolute !important; top: 0; left: 0; color: transparent !important;
-            -webkit-text-stroke:#fff; -webkit-text-stroke-width:3px; z-index: 2;}
-    </style>
-    
-    <script>
-        /*새로운 창*/
-        $(document).ready(function(){
-            $("a[href^='http']").attr('target','_blank');
-        });
-        $(function(){
-            /*섹션1 하트클릭 애니메이션*/
-            $('.AboutTag a').click(function(){
-                var _index = $(this).index();
-                $('.AboutTagHeart div').eq(_index).toggleClass("on");
-            })
-            /*about me*/
-            $('#section1 div .Aboutleft').mouseover(function(){
-                $('#section1 div .Aboutleft .bg2').css({"background-image":"url(./img/me5.png)"});
-            }).mouseout(function(){
-                $('#section1 div .Aboutleft .bg2').css({"background-image":"url(./img/me4.png)"});
-            })
-            /*contact me*/
-            $('#section5 .myInfo .infoInner .me').mouseover(function(){
-                $('#section5 .myInfo .infoInner .me').css({"background-image":"url(./img/contact_me.png)"});
-            }).mouseout(function(){
-                $('#section5 .myInfo .infoInner .me').css({"background-image":"url(./img/me7.png)"});
-            })
-            
-            /*portfolio link걸기*/
-            
-            $('#section3 .pContainer .pCont .pComputer .slideView2 div').eq(0).click(function(){
-                $(location).attr("href","http://ogh010.dothome.co.kr/jeju/index.html");
-            });
-            $('#section3 .pContainer .pCont .pComputer .slideView2 div').eq(1).click(function(){
-                $(location).attr("href","http://ogh020.dothome.co.kr/day80_0602/index1.html")
-            });
-            $('#section3 .pContainer .pCont .pComputer .slideView2 div').eq(2).click(function(){
-                $(location).attr("href","http://ogh020.dothome.co.kr/citizen/today.html")
-            });
-            $('#section3 .pResponsive .res3 .phoneImg .phoneImgInner div , #section3 .pResponsive .res3 .padImg .padImgInner div').click(function(){
-                $(location).attr("href","http://ogh020.dothome.co.kr/citizen/today.html")
-            });
-            $('#section3 .pContainer .pCont .pComputer .slideView2 div').eq(3).click(function(){
-                $(location).attr("href","#")
-            });
-            
-            /*탭*/
-            $('.con20 .tab0 .tabCont0 div').eq(1).hide();
-            $('.con20 .tab0 .tabTitle0 li').eq(0).addClass("on");
-            $('.con20 .tab0 .tabTitle0 li').click(function(){
-                var _index = $(this).index();
-                $('.con20 .tab0 .tabCont0 div').hide();
-                $('.con20 .tab0 .tabCont0 div').eq(_index).show();
-                $('.con20 .tab0 .tabTitle0 li').removeClass("on");
-                $('.con20 .tab0 .tabTitle0 li').eq(_index).addClass("on");
-            })
-            
-            $('.con21 .tab1 .tabCont1 div').eq(1).hide();
-            $('.con21 .tab1 .tabTitle1 li').eq(0).addClass("on");
-            $('.con21 .tab1 .tabTitle1 li').click(function(){
-                var _index = $(this).index();
-                $('.con21 .tab1 .tabCont1 div').hide();
-                $('.con21 .tab1 .tabCont1 div').eq(_index).show();
-                $('.con21 .tab1 .tabTitle1 li').removeClass("on");
-                $('.con21 .tab1 .tabTitle1 li').eq(_index).addClass("on");
-            })
-            
-            $('.con22 .tab2 .tabCont2 div').eq(1).hide();
-            $('.con22 .tab2 .tabTitle2 li').eq(0).addClass("on");
-            $('.con22 .tab2 .tabTitle2 li').click(function(){
-                var _index = $(this).index();
-                $('.con22 .tab2 .tabCont2 div').hide();
-                $('.con22 .tab2 .tabCont2 div').eq(_index).show();
-                $('.con22 .tab2 .tabTitle2 li').removeClass("on");
-                $('.con22 .tab2 .tabTitle2 li').eq(_index).addClass("on");
-            })
-            
-            $('.con23 .tab3 .tabCont3 div').eq(1).hide();
-            $('.con23 .tab3 .tabTitle3 li').eq(0).addClass("on");
-            $('.con23 .tab3 .tabTitle3 li').click(function(){
-                var _index = $(this).index();
-                $('.con23 .tab3 .tabCont3 div').hide();
-                $('.con23 .tab3 .tabCont3 div').eq(_index).show();
-                $('.con23 .tab3 .tabTitle3 li').removeClass("on");
-                $('.con23 .tab3 .tabTitle3 li').eq(_index).addClass("on");
-            })
-            
-        })
-        
-        
-        
-    </script>
-</head>
-<body>
-   
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
     <div class="wrapper">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide" id="section0">
-                <div class="container">
-                   <ul data-relative-input="true" id="scene">
-                       
-                       <li class="layer" data-depth="0.8">
-    
-                       </li>
-                       <li class="layer" data-depth="0.4">
-                           
-                       </li>
-                       <li class="layer" data-depth="1.2">
-                           
-                       </li>
-                       <li class="layer" data-depth="0.09">
-                           <h1>안녕하세요! 신입 웹퍼블리셔<br><span> 오가희</span>입니다:D</h1>
-                       </li>
-                   </ul>
-               </div>
-               <div class="stars stars1">*</div>
-                <div class="stars stars2">*</div>
-                <div class="stars stars3">*</div>
-                <div class="stars stars4">*</div>
-                <div class="stars stars5">*</div>
-                <div class="stars stars6">*</div>
-                <div class="scrollAni">
-                    <p>scroll</p>
-                    <span></span>
-                    <span></span>
-                </div>
-                <p class="intro"><a href="intro.html"><i class="fas fa-reply"></i> 앞으로가기</a></p>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" id="section0">
+            <div class="container">
+              <ul data-relative-input="true" id="scene">
+                <li class="layer" data-depth="0.8"></li>
+                <li class="layer" data-depth="0.4"></li>
+                <li class="layer" data-depth="1.2"></li>
+                <li class="layer" data-depth="0.09">
+                  <h1>
+                    안녕하세요! 경력 프론트엔드 개발자<br /><span> 오가희</span
+                    >입니다:D
+                  </h1>
+                </li>
+              </ul>
             </div>
-            
-            <div class="swiper-slide" id="section3">
-                <h2>Portfolio</h2>
-                <h3>1부터 100까지 직접 제작한 저의 포트폴리오를 소개합니다 :D</h3>
-                <div class="line">
-                    <span class="pLine"></span>
-                </div>
-                
-                <div class="pContainer">
-                    <div class="flex">
-                        <div class="pText">
-                        <div class="slideView">
-                            <div class="con">
-                                <p class="text">pc 사이트 제작</p>
-                                <button><a href="http://ogh010.dothome.co.kr/jeju/index.html">Go To Site</a></button>
-                                <h1>제주 관광<br>포털 사이트</h1>
-                            </div>
-                            <div class="con">
-                                <p class="text">pc 사이트 리뉴얼</p>
-                                <button><a href="http://ogh020.dothome.co.kr/day80_0602/index1.html">Go To Site</a></button>
-                                <h1>KB<br>국민 은행</h1>
-                            </div>
-                            <div class="con">
-                                <p class="text">responsive 사이트 리뉴얼</p>
-                                <button><a href="http://ogh020.dothome.co.kr/citizen/today.html">Go To Site</a></button>
-                                <h1>시티즌</h1>
-                            </div>
-                            <div class="con">
-                                <p class="text">pc 사이트 리뉴얼</p>
-                                <button><a href="http://ogh020.dothome.co.kr/starbucks/index.html">Go To Site</a></button>
-                                <h1>Starbucks</h1>
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pText2">
-                        <div class="slideView2">
-                            <div class="con2 con20">
-                                <div class="tab tab0">
-                                    <ul class="tabTitle tabTitle0">
-                                        <li>제작의도</li>
-                                        <li>UI / UX</li>
-                                    </ul>
-                                    <div class="tabCont tabCont0">
-                                        <div>
-                                            <p>세계자연유산으로 등재된 대한민국의 아름다운 섬, 제주도의 생태학적 가치를 전달하는 것을 목표로 기획하였습니다.</p>
-                                            <p>제주도만의 특별한 자연친화적인 특징을 살려 친근하게 표현하기 위해 일러스트로 흥미와 관심을 유발하도록 기획했습니다.</p>
-                                            <p>각종 시각자료를 통해 제주도를 소개할 뿐 아니라 마이페이지를 개설하여 방문자들에게 여행지에 대한 정보나, 이벤트와 혜택을 제공받을 수 있도록 했습니다.</p>
-                                            <p>메인페이지와 총 7개의 서브페이지로 구성되어있습니다.</p>
-                                        </div>
-                                        <div>
-                                            <P>Worked by</P>
-                                            <p class="html">HTML</p>
-                                            <p class="css">CSS</p>
-                                            <p class="illu">Illustrator</p>
-                                            <p class="photo">Photoshop</p>
-                                            <p class="jq"><span>JQUERY</span> </p>
-                                            <span class="inner"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2 con21">
-                                <div class="tab tab1">
-                                    <ul class="tabTitle tabTitle1">
-                                        <li>제작의도</li>
-                                        <li>UI / UX</li>
-                                    </ul>
-                                    <div class="tabCont tabCont1">
-                                        <div><p>KB 국민은행 가입고객이 보유하고 있는 금융정보에 대한 전체조회, 계좌이체, 자동이체, 자산관리 등 꼭 필요한 서비스를 편리하게 이용하실 수 있도록 새롭게 리뉴얼 하였습니다. </p>
-                                        <p>무엇보다 고객의 금융정보를 안전하고 불편함없이 관리 유지 할 수 있도록 불필요하게 안내되는 정보들은 최소화하여 서비스 이용에 집중할 수 있도록 ux 편의성을 대폭 개선하였습니다.
-                                        </p></div>
-                                        
-                                        <div>
-                                            <P>Worked by</P>
-                                            <p class="html">HTML</p>
-                                            <p class="css">CSS</p>
-                                            <p class="js">JAVASCRIPT</p>
-                                            <p class="jq"><span>JQUERY</span> &#40;slick.js&#41; </p>
-                                            <span class="inner"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2 con22">
-                                <div class="tab tab2">
-                                    <ul class="tabTitle tabTitle2">
-                                        <li>제작의도</li>
-                                        <li>UI / UX</li>
-                                    </ul>
-                                    <div class="tabCont tabCont2">
-                                        <div>
-                                            <p>브랜드를 좀 더 트렌디하고 효과적으로 보이게 하기 위한 세련된 디자인과 다양한 애니메이션을 활용했습니다.</p>
-                                             <p>사용자가 지루할 틈 없이 인상 깊은 브랜드로 기억할 수 있게 제작하였습니다.</p>
-                                            <p>전체적으로 자연스러운 톤온톤 색상을 매치하여 차분하고 부드러운 느낌을 강조하였으며, 특히 자바스크립트 애니메이션 라이브러리인 GSAP를 적절히 활용하여 사용자들의 시선을 사로잡을 수 있는 햄버거버튼을 구축하였습니다. </p>
-                                        </div>
-                                        <div>
-                                            <P>Worked by</P>
-                                            <p class="html">HTML</p>
-                                            <p class="css">CSS</p>
-                                            <p class="js">JAVASCRIPT</p>
-                                            <p class="jq"><span>JQUERY</span> &#40;aos.js , gsap.js&#41; </p>
-                                            <span class="inner"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2 con23">
-                                <div class="tab tab3">
-                                    <ul class="tabTitle tabTitle3">
-                                        <li>제작의도</li>
-                                        <li>UI / UX</li>
-                                    </ul>
-                                    <div class="tabCont tabCont3">
-                                        <div>
-                                            <p>세계에서 가장 큰 커피 전문점인 스타벅스 웹페이지를 리디자인하고 구현하였습니다.</p>
-                                            <p>메인페이지의 중간 하단부분에 위치한 스타벅스 음료에 애니메이션과 onmouseover효과를 주어 심플하지만 심심해 보이지 않도록 구현했습니다.</p>
-                                        </div>
-                                        <div>
-                                            <P>Worked by</P>
-                                            <p class="html">HTML</p>
-                                            <p class="css">CSS</p>
-                                            <p class="illu">Illustrator</p>
-                                            <p class="js">JAVASCRIPT</p>
-                                            <p class="jq"><span>JQUERY</span></p>
-                                            <span class="inner"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    
-                    <div class="pCont">
-                        <div class="pComputer">
-                            <div class="slideView2">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pBg">
-                    <div class="slideViewBg">
-                        <div></div>
-                        <div></div>
-                        <div>
-                            <video muted autoplay loop src="./img/bg3.mp4"></video>
-                            
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <div class="pResponsive">
-                    <div class="slideViewBg2">
-                        <div class="res"></div>
-                        <div class="res"></div>
-                        <div class="res res3">
-                           <div class="pad">
-                               <div class="padImg">
-                                   <div class="padImgInner">
-                                       <div></div>
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="phone">
-                               <div class="phoneImg">
-                                   <div class="phoneImgInner">
-                                       <div></div>
-                                   </div>
-                               </div>
-                           </div>
-                           
-                            
-                        </div>
-                        <div class="res"></div>
-                    </div>
-                </div>
-                <div class="numIndicator">
-                    <div class="current">1</div>
-                    <div class="allNum"></div>
-                </div>
-                <div class="indicator">
-                    <div class="prev"></div>
-                    <div class="next"></div>
-                </div>
-                
-                
-                
+            <div class="stars stars1">*</div>
+            <div class="stars stars2">*</div>
+            <div class="stars stars3">*</div>
+            <div class="stars stars4">*</div>
+            <div class="stars stars5">*</div>
+            <div class="stars stars6">*</div>
+            <div class="scrollAni">
+              <p>scroll</p>
+              <span></span>
+              <span></span>
             </div>
- 
-            <div class="swiper-slide" id="section1">
-                <h2>About me</h2>
-                <h3>저를 소개합니다 :D</h3>
-                <div>
-                    <div class="Aboutleft">
-                        <div class="bg1">
-                            <span class="blink"></span>
-                            <span class="blink"></span>
-                            <span class="blink"></span>
-                            <span class="blink"></span>
-                        </div>
-                        <div class="bg2">
-                            
-                        </div>
-                    </div>
-                    <div class="Aboutright">
-                        <div class="AboutrightTxt">
-                            <div class="textLeft">
-                                <span>이름 </span><p>오가희 1998.06.07</p><br>
-                                <span>학력 </span>
-                                <p>2021.02. ~ 2021.07. 신촌 이젠아카데미</p>
-                                <p>모바일 앱 &amp; 웹디자인(웹퍼블리셔)<span>수료</span></p>
-                                <p>2021.02. 안양대학교 소프트웨어학과 <span>졸업</span></p>
-                                <p>2017.02. 경복여자고등학교 <span>졸업</span></p>
-                            </div>
-                            <div class="textLeft">
-                                <span>수상경력</span>
-                                <p>2020 CAPSTONE 경진대회 최우수상</p>
-                                <p>2017 교내 아리비교과 민들레독후감 은상</p>
-                                <p>2017 울산관광상품 개발 공모전 본선</p>
-                                <span>자격증</span>
-                                <p>2021 웹 디자인기능사</p>
-                                <p>2021 컴퓨터활용능력 2급 <span>합격예정</span> </p>
-                                <p>2020 정보처리기사<span>합격예정</span> </p>
-                                
-                            </div>
-                            
-                        </div>
-                        <div class="AboutTag">
-                            <a href="#">#Professional</a>
-                            <a href="#">#Developer</a>
-                            <a href="#">#Publisher</a>
-                            <a href="#">#Future</a>
-                            <a href="#">#Twentyfour</a>
-                            <a href="#">#Web</a>
-                            <a href="#">#Charming</a>
-                            <a href="#">#Friends</a>
-                            <a href="#">#Family</a>
-                            <a href="#">#Jeju</a>
-                        </div>
-                        <p class="click">Click ↑ ↑ ↑ ↑</p>
-                        <div class="AboutTagHeart">
-                            <div><p>wanna be<br>and<br>must be!!</p></div>
-                            <div><p>my goal!!</p></div>
-                            <div><p>my dream!</p></div>
-                            <div><p>A life full of happiness.</p></div>
-                            <div><p>my age</p></div>
-                            <div><p>my interests</p></div>
-                            <div><p>wanna be</p></div>
-                            <div><p>I love you<br> guys :D</p></div>
-                            <div><p>사랑합니다 💗</p></div>
-                            <div><p>place of my memories</p></div>
-                        </div>
-                    </div>
-                </div>
+            <p class="intro">
+              <a href="intro.html"><i class="fas fa-reply"></i> 앞으로가기</a>
+            </p>
+          </div>
+
+          <div class="swiper-slide" id="section3">
+            <h2>Portfolio</h2>
+            <h3>1부터 100까지 직접 제작한 저의 포트폴리오를 소개합니다 :D</h3>
+            <div class="line">
+              <span class="pLine"></span>
             </div>
-            <div class="swiper-slide" id="section2">
-                <h2>Skill</h2>
-                <h3>저의 보유기술입니다 :D</h3>
-                <span class="fish">🐠</span>
-                <span class="fish2">🐟</span>
-                <div class="wave-wrap">
-                    <div class="unit">
-                        <div class="wave"></div><!-- 파도 애니메이션 -->
-                        <span class="num"><!--카운트-->
-                            <strong>100</strong>%
-                        </span>
+
+            <div class="pContainer">
+              <div class="flex">
+                <div class="pText">
+                  <div class="slideView">
+                    <div class="con">
+                      <p class="text">pc 사이트 제작</p>
+                      <button>
+                        <a href="https://ogh010.github.io/jeju/">Go To Site</a>
+                      </button>
+                      <h1>제주 관광<br />포털 사이트</h1>
                     </div>
-                </div>
-                <ul class="link-wrap">
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn">html<img src="./img/html.svg" alt=""></a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/css.svg" alt="">css</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/js.svg" alt="">javascript</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/jquery.svg" alt="">jQuery</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/ps.svg" alt="">photoshop</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/ai.svg" alt="">illustrator</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/bootstrap.svg" alt="">bootstrap</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/react-2.svg" alt="">react</a>
-                    </li>
-                    <li class="link-unit">
-                        <a href="javascript:" class="btn"><img src="./img/git.svg" alt="">git<span>(형상관리)</span></a>
-                    </li>
-                </ul>
-                <ul class="skillExplain">
-                    <li>
-                        <p><span>웹 접근성</span>을 준수하며 html5 <span>시멘틱 태그</span>를 중심으로 <span>마크업</span>할 수 있습니다. </p>
-                        <p><span>반응형</span> 페이지 제작이 가능합니다. 다양한 기기(PC, 태블릿PC, 스마트폰, 스마트TV 등) <br>해상도에 맞게 최적화된 레이아웃 및 컨텐츠로 변동할 수 있습니다. </p>
-                    </li>
-                    <li>
-                        <p>부드러운 <span>애니메이션</span>과<span> 3D transform</span></p>
-                        <p><span>float</span>와 <span>flex</span>로 적절한 레이아웃을 구성할 수 있습니다.</p>
-                    </li>
-                    <li>
-                        <p>기본연산,if,each,for,array 등 <span>자바스크립트 기본 함수 활용</span>이 가능합니다.</p>
-                        <p><span>DOM</span>과 <span>BOM</span> 구조를 바탕으로 스크립트를 구현할 수 있습니다.</p>
-                        <p>또한 <span>json</span> &amp; <span>xml</span>을 활용한 <span>ajax</span>를 구현한 경험이 있습니다.</p>
-                    </li>
-                    <li>
-                        <p><span>다양한 플러그인</span> 활용/수정 가능하며</p>
-                        <p>html 속성 밑 태그 <span>동적제어</span>, <span>다양한 이벤트 함수</span>의 자유로운 활용이 가능합니다. </p>
-                    </li>
-                    <li>
-                        <p>포토샵을 활용하여 사진 편집 및 활용이 가능합니다.</p>
-                    </li>
-                    <li>
-                        <p>일러스트를 활용하여 다양한 디자인이 가능합니다.</p>
-                    </li>
-                    <li>
-                        <p><span>부트스트랩</span>을 활용한 빠른 디자인 가능 원하는 동작에 대한 수정/보완 가능합니다.</p>
-                    </li>
-                    <li>
-                        <p>리액트를 통해서 재사용 가능한 사용자 정의 태그인 컴포넌트 구현이 가능합니다. </p>
-                    </li>
-                    <li>
-                        <p>개발 능률의 향상을 위해 <span>VSCODE</span>와 <span>연동</span>, <span>유지보수</span>, <span>기록 백업</span>이 가능합니다.</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="swiper-slide" id="section5">
-                
-               <h2>Contact me</h2>
-               <h4>저의 포트폴리오 페이지를 끝까지 봐주셔서 감사합니다.<br>
-                저에게 관심이 생겨 함께 나누고 싶은 얘기가 있으시다면 이쪽으로 연락주세요! <br>감사합니다:D</h4>
-                <div class="myInfo">
-                    <div class="infoInner">
-                        <p>😊 오가희 <span></span></p>
-                        <p>📞 010 - 9224 - 5158</p>
-                        <p>✉️ ogh010@naver.com</p>
-                        <div class="me"></div>
+                    <div class="con">
+                      <p class="text">pc 사이트 리뉴얼</p>
+                      <button>
+                        <a href="https://ogh010.github.io/kb-bank/"
+                          >Go To Site</a
+                        >
+                      </button>
+                      <h1>KB<br />국민 은행</h1>
                     </div>
+                    <div class="con">
+                      <p class="text">responsive 사이트 리뉴얼</p>
+                      <button>
+                        <a href="https://ogh010.github.io/watch-clone/"
+                          >Go To Site</a
+                        >
+                      </button>
+                      <h1>시티즌</h1>
+                    </div>
+                    <div class="con">
+                      <p class="text">pc 사이트 리뉴얼</p>
+                      <button>
+                        <a href="https://ogh010.github.io/Starbucks-web/"
+                          >Go To Site</a
+                        >
+                      </button>
+                      <h1>Starbucks</h1>
+                    </div>
+                  </div>
                 </div>
-                <div class="ContactInner">
-                   <div class="ContactLeft">
-                       <img src="./img/me2.png" alt="">
-                       <p>연락주세요 :D</p>
-                   </div>
-                   <div class="ContactRight">
-                     <div class="square" style="--i:0"></div>
-                <div class="square" style="--i:1"></div>
-                <div class="square" style="--i:2"></div>
-                      <div class="form">
-                          <div class="inputBox">
-                               <input type="text" placeholder="성함">
-                           </div>
-                           <div class="inputBox">
-                               <input type="text" placeholder="전화번호">
-                           </div>
-                           <div class="inputBox">
-                               <input type="text" placeholder="회사이름">
-                           </div>
-                           <div class="inputBox">
-                               <input type="text" placeholder="메시지">
-                           </div>
-                           <div class="inputBox">
-                               <a href="mailto:ogh010@naver.com">
-                               <input type="submit" value="전송하기">
-                               </a>
-                           </div>
-                           <p>※ 2일 내로 답장드리겠습니다.</p>
+                <div class="pText2">
+                  <div class="slideView2">
+                    <div class="con2 con20">
+                      <div class="tab tab0">
+                        <ul class="tabTitle tabTitle0">
+                          <li>제작의도</li>
+                          <li>UI / UX</li>
+                        </ul>
+                        <div class="tabCont tabCont0">
+                          <div>
+                            <p>
+                              세계자연유산으로 등재된 대한민국의 아름다운 섬,
+                              제주도의 생태학적 가치를 전달하는 것을 목표로
+                              기획하였습니다.
+                            </p>
+                            <p>
+                              제주도만의 특별한 자연친화적인 특징을 살려
+                              친근하게 표현하기 위해 일러스트로 흥미와 관심을
+                              유발하도록 기획했습니다.
+                            </p>
+                            <p>
+                              각종 시각자료를 통해 제주도를 소개할 뿐 아니라
+                              마이페이지를 개설하여 방문자들에게 여행지에 대한
+                              정보나, 이벤트와 혜택을 제공받을 수 있도록
+                              했습니다.
+                            </p>
+                            <p>
+                              메인페이지와 총 7개의 서브페이지로
+                              구성되어있습니다.
+                            </p>
+                          </div>
+                          <div>
+                            <p>Worked by</p>
+                            <p class="html">HTML</p>
+                            <p class="css">CSS</p>
+                            <p class="illu">Illustrator</p>
+                            <p class="photo">Photoshop</p>
+                            <p class="jq"><span>JQUERY</span></p>
+                            <span class="inner"></span>
+                          </div>
+                        </div>
                       </div>
-                   </div>
+                    </div>
+                    <div class="con2 con21">
+                      <div class="tab tab1">
+                        <ul class="tabTitle tabTitle1">
+                          <li>제작의도</li>
+                          <li>UI / UX</li>
+                        </ul>
+                        <div class="tabCont tabCont1">
+                          <div>
+                            <p>
+                              KB 국민은행 가입고객이 보유하고 있는 금융정보에
+                              대한 전체조회, 계좌이체, 자동이체, 자산관리 등 꼭
+                              필요한 서비스를 편리하게 이용하실 수 있도록 새롭게
+                              리뉴얼 하였습니다.
+                            </p>
+                            <p>
+                              무엇보다 고객의 금융정보를 안전하고 불편함없이
+                              관리 유지 할 수 있도록 불필요하게 안내되는
+                              정보들은 최소화하여 서비스 이용에 집중할 수 있도록
+                              ux 편의성을 대폭 개선하였습니다.
+                            </p>
+                          </div>
+
+                          <div>
+                            <p>Worked by</p>
+                            <p class="html">HTML</p>
+                            <p class="css">CSS</p>
+                            <p class="js">JAVASCRIPT</p>
+                            <p class="jq">
+                              <span>JQUERY</span> &#40;slick.js&#41;
+                            </p>
+                            <span class="inner"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="con2 con22">
+                      <div class="tab tab2">
+                        <ul class="tabTitle tabTitle2">
+                          <li>제작의도</li>
+                          <li>UI / UX</li>
+                        </ul>
+                        <div class="tabCont tabCont2">
+                          <div>
+                            <p>
+                              브랜드를 좀 더 트렌디하고 효과적으로 보이게 하기
+                              위한 세련된 디자인과 다양한 애니메이션을
+                              활용했습니다.
+                            </p>
+                            <p>
+                              사용자가 지루할 틈 없이 인상 깊은 브랜드로 기억할
+                              수 있게 제작하였습니다.
+                            </p>
+                            <p>
+                              전체적으로 자연스러운 톤온톤 색상을 매치하여
+                              차분하고 부드러운 느낌을 강조하였으며, 특히
+                              자바스크립트 애니메이션 라이브러리인 GSAP를 적절히
+                              활용하여 사용자들의 시선을 사로잡을 수 있는
+                              햄버거버튼을 구축하였습니다.
+                            </p>
+                          </div>
+                          <div>
+                            <p>Worked by</p>
+                            <p class="html">HTML</p>
+                            <p class="css">CSS</p>
+                            <p class="js">JAVASCRIPT</p>
+                            <p class="jq">
+                              <span>JQUERY</span> &#40;aos.js , gsap.js&#41;
+                            </p>
+                            <span class="inner"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="con2 con23">
+                      <div class="tab tab3">
+                        <ul class="tabTitle tabTitle3">
+                          <li>제작의도</li>
+                          <li>UI / UX</li>
+                        </ul>
+                        <div class="tabCont tabCont3">
+                          <div>
+                            <p>
+                              세계에서 가장 큰 커피 전문점인 스타벅스 웹페이지를
+                              리디자인하고 구현하였습니다.
+                            </p>
+                            <p>
+                              메인페이지의 중간 하단부분에 위치한 스타벅스
+                              음료에 애니메이션과 onmouseover효과를 주어
+                              심플하지만 심심해 보이지 않도록 구현했습니다.
+                            </p>
+                          </div>
+                          <div>
+                            <p>Worked by</p>
+                            <p class="html">HTML</p>
+                            <p class="css">CSS</p>
+                            <p class="illu">Illustrator</p>
+                            <p class="js">JAVASCRIPT</p>
+                            <p class="jq"><span>JQUERY</span></p>
+                            <span class="inner"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="contactSns">
-                    <ul>
-                        <li><a href="https://www.instagram.com/daram.__.g/?hl=ko"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://open.kakao.com/o/sRgPQwmd"><div></div></a></li>
-                    </ul>
+              </div>
+
+              <div class="pCont">
+                <div class="pComputer">
+                  <div class="slideView2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
                 </div>
-                <div class="contactSns2">
-                    <ul>
-                        <li><div></div></li>
-                        <li><a href="https://github.com/ogh010"><div></div></a></li>
-                    </ul>
+              </div>
+            </div>
+            <div class="pBg">
+              <div class="slideViewBg">
+                <div></div>
+                <div></div>
+                <div>
+                  <video muted autoplay loop src="./img/bg3.mp4"></video>
                 </div>
-                <div class="myprofile">
-                    <div><p>이력서</p></div>
-                    <div><p>자기소개서</p></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="pResponsive">
+              <div class="slideViewBg2">
+                <div class="res"></div>
+                <div class="res"></div>
+                <div class="res res3">
+                  <div class="pad">
+                    <div class="padImg">
+                      <div class="padImgInner">
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <div class="phoneImg">
+                      <div class="phoneImgInner">
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                
+                <div class="res"></div>
+              </div>
+            </div>
+            <div class="numIndicator">
+              <div class="current">1</div>
+              <div class="allNum"></div>
+            </div>
+            <div class="indicator">
+              <div class="prev"></div>
+              <div class="next"></div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
 
+          <div class="swiper-slide" id="section1">
+            <h2>About me</h2>
+            <h3>저를 소개합니다 :D</h3>
+            <div>
+              <div class="Aboutleft">
+                <div class="bg1">
+                  <span class="blink"></span>
+                  <span class="blink"></span>
+                  <span class="blink"></span>
+                  <span class="blink"></span>
+                </div>
+                <div class="bg2"></div>
+              </div>
+              <div class="Aboutright">
+                <div class="AboutrightTxt">
+                  <div class="textLeft">
+                    <span>이름 </span>
+                    <p>오가희 1998.06.07</p>
+                    <br />
+                    <span>학력 </span>
+                    <p>2021.02. ~ 2021.07. 신촌 이젠아카데미</p>
+                    <p>모바일 앱 &amp; 웹디자인(웹퍼블리셔)<span>수료</span></p>
+                    <p>2021.02. 안양대학교 소프트웨어학과 <span>졸업</span></p>
+                    <p>2017.02. 경복여자고등학교 <span>졸업</span></p>
+                  </div>
+                  <div class="textLeft">
+                    <span>수상경력</span>
+                    <p>2020 CAPSTONE 경진대회 최우수상</p>
+                    <p>2017 교내 아리비교과 민들레독후감 은상</p>
+                    <p>2017 울산관광상품 개발 공모전 본선</p>
+                    <span>자격증</span>
+                    <p>2021 웹 디자인기능사</p>
+                    <p>2021 컴퓨터활용능력 2급 <span>합격예정</span></p>
+                    <p>2020 정보처리기사<span>합격예정</span></p>
+                  </div>
+                </div>
+                <div class="AboutTag">
+                  <a href="#">#Professional</a>
+                  <a href="#">#Developer</a>
+                  <a href="#">#Publisher</a>
+                  <a href="#">#Future</a>
+                  <a href="#">#Twentyfour</a>
+                  <a href="#">#Web</a>
+                  <a href="#">#Charming</a>
+                  <a href="#">#Friends</a>
+                  <a href="#">#Family</a>
+                  <a href="#">#Jeju</a>
+                </div>
+                <p class="click">Click ↑ ↑ ↑ ↑</p>
+                <div class="AboutTagHeart">
+                  <div>
+                    <p>wanna be<br />and<br />must be!!</p>
+                  </div>
+                  <div><p>my goal!!</p></div>
+                  <div><p>my dream!</p></div>
+                  <div><p>A life full of happiness.</p></div>
+                  <div><p>my age</p></div>
+                  <div><p>my interests</p></div>
+                  <div><p>wanna be</p></div>
+                  <div>
+                    <p>
+                      I love you<br />
+                      guys :D
+                    </p>
+                  </div>
+                  <div><p>사랑합니다 💗</p></div>
+                  <div><p>place of my memories</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" id="section2">
+            <h2>Skill</h2>
+            <h3>저의 보유기술입니다 :D</h3>
+            <span class="fish">🐠</span>
+            <span class="fish2">🐟</span>
+            <div class="wave-wrap">
+              <div class="unit">
+                <div class="wave"></div>
+                <!-- 파도 애니메이션 -->
+                <span class="num"
+                  ><!--카운트-->
+                  <strong>100</strong>%
+                </span>
+              </div>
+            </div>
+            <ul class="link-wrap">
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  >html<img src="./img/html.svg" alt=""
+                /></a>
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/css.svg" alt="" />css</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/js.svg" alt="" />javascript</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/jquery.svg" alt="" />jQuery</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/ps.svg" alt="" />photoshop</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/ai.svg" alt="" />illustrator</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/bootstrap.svg" alt="" />bootstrap</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/react-2.svg" alt="" />react</a
+                >
+              </li>
+              <li class="link-unit">
+                <a href="javascript:" class="btn"
+                  ><img src="./img/git.svg" alt="" />git<span
+                    >(형상관리)</span
+                  ></a
+                >
+              </li>
+            </ul>
+            <ul class="skillExplain">
+              <li>
+                <p>
+                  <span>웹 접근성</span>을 준수하며 html5
+                  <span>시멘틱 태그</span>를 중심으로 <span>마크업</span>할 수
+                  있습니다.
+                </p>
+                <p>
+                  <span>반응형</span> 페이지 제작이 가능합니다. 다양한 기기(PC,
+                  태블릿PC, 스마트폰, 스마트TV 등) <br />해상도에 맞게 최적화된
+                  레이아웃 및 컨텐츠로 변동할 수 있습니다.
+                </p>
+              </li>
+              <li>
+                <p>
+                  부드러운 <span>애니메이션</span>과<span> 3D transform</span>
+                </p>
+                <p>
+                  <span>float</span>와 <span>flex</span>로 적절한 레이아웃을
+                  구성할 수 있습니다.
+                </p>
+              </li>
+              <li>
+                <p>
+                  기본연산,if,each,for,array 등
+                  <span>자바스크립트 기본 함수 활용</span>이 가능합니다.
+                </p>
+                <p>
+                  <span>DOM</span>과 <span>BOM</span> 구조를 바탕으로 스크립트를
+                  구현할 수 있습니다.
+                </p>
+                <p>
+                  또한 <span>json</span> &amp; <span>xml</span>을 활용한
+                  <span>ajax</span>를 구현한 경험이 있습니다.
+                </p>
+              </li>
+              <li>
+                <p><span>다양한 플러그인</span> 활용/수정 가능하며</p>
+                <p>
+                  html 속성 밑 태그 <span>동적제어</span>,
+                  <span>다양한 이벤트 함수</span>의 자유로운 활용이 가능합니다.
+                </p>
+              </li>
+              <li>
+                <p>포토샵을 활용하여 사진 편집 및 활용이 가능합니다.</p>
+              </li>
+              <li>
+                <p>일러스트를 활용하여 다양한 디자인이 가능합니다.</p>
+              </li>
+              <li>
+                <p>
+                  <span>부트스트랩</span>을 활용한 빠른 디자인 가능 원하는
+                  동작에 대한 수정/보완 가능합니다.
+                </p>
+              </li>
+              <li>
+                <p>
+                  리액트를 통해서 재사용 가능한 사용자 정의 태그인 컴포넌트
+                  구현이 가능합니다.
+                </p>
+              </li>
+              <li>
+                <p>
+                  개발 능률의 향상을 위해 <span>VSCODE</span>와
+                  <span>연동</span>, <span>유지보수</span>,
+                  <span>기록 백업</span>이 가능합니다.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide" id="section5">
+            <h2>Contact me</h2>
+            <h4>
+              저의 포트폴리오 페이지를 끝까지 봐주셔서 감사합니다.<br />
+              저에게 관심이 생겨 함께 나누고 싶은 얘기가 있으시다면 이쪽으로
+              연락주세요! <br />감사합니다:D
+            </h4>
+            <div class="myInfo">
+              <div class="infoInner">
+                <p>😊 오가희 <span></span></p>
+                <p>📞 010 - 9224 - 5158</p>
+                <p>✉️ ogh010@naver.com</p>
+                <div class="me"></div>
+              </div>
+            </div>
+            <div class="ContactInner">
+              <div class="ContactLeft">
+                <img src="./img/me2.png" alt="" />
+                <p>연락주세요 :D</p>
+              </div>
+              <div class="ContactRight">
+                <div class="square" style="--i: 0"></div>
+                <div class="square" style="--i: 1"></div>
+                <div class="square" style="--i: 2"></div>
+                <div class="form">
+                  <div class="inputBox">
+                    <input type="text" placeholder="성함" />
+                  </div>
+                  <div class="inputBox">
+                    <input type="text" placeholder="전화번호" />
+                  </div>
+                  <div class="inputBox">
+                    <input type="text" placeholder="회사이름" />
+                  </div>
+                  <div class="inputBox">
+                    <input type="text" placeholder="메시지" />
+                  </div>
+                  <div class="inputBox">
+                    <a href="mailto:ogh010@naver.com">
+                      <input type="submit" value="전송하기" />
+                    </a>
+                  </div>
+                  <p>※ 2일 내로 답장드리겠습니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="contactSns">
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/daram.__.g/?hl=ko"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://open.kakao.com/o/sRgPQwmd"><div></div></a>
+                </li>
+              </ul>
+            </div>
+            <div class="contactSns2">
+              <ul>
+                <li><div></div></li>
+                <li>
+                  <a href="https://github.com/ogh010"><div></div></a>
+                </li>
+              </ul>
+            </div>
+            <div class="myprofile">
+              <div><p>이력서</p></div>
+              <div><p>자기소개서</p></div>
+            </div>
+          </div>
         </div>
-        
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
     <script src="./js/parallax.min.js" type="text/javascript"></script>
     <script>
-        var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene);
-        
-    var bullet = ['Top','Portfolio', 'About', 'Skill',  'Contact'];
-    var mySwiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      speed: 1000,
-      pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-      return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
-    }
-    },
-      mousewheel:{
-          
-      }
-    });
-        mySwiper.on('slideChangeTransitionStart', function(){
-            $('.swiper-slide').css("transform","scale(.8)");
-        }).on('slideChangeTransitionEnd',function(){
-            $('.swiper-slide').css("transform","scale(1)");
-        });
-        
-        $(function(){
-            /*페이지네이션 텍스트*/
-            $('.swiper-pagination').mouseover(function(){
-            $('.swiper-pagination-bullet>span').css({'opacity':1})
-            }).mouseout(function(){
-                $('.swiper-pagination-bullet>span').css({'opacity':0})
-            })
-            
-            
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+      var bullet = ['Top', 'Portfolio', 'About', 'Skill', 'Contact'];
+      var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'vertical',
+        speed: 1000,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<div class="' +
+              className +
+              '"><span>' +
+              bullet[index] +
+              '</span></div>'
+            );
+          },
+        },
+        mousewheel: {},
+      });
+      mySwiper
+        .on('slideChangeTransitionStart', function () {
+          $('.swiper-slide').css('transform', 'scale(.8)');
         })
+        .on('slideChangeTransitionEnd', function () {
+          $('.swiper-slide').css('transform', 'scale(1)');
+        });
+
+      $(function () {
+        /*페이지네이션 텍스트*/
+        $('.swiper-pagination')
+          .mouseover(function () {
+            $('.swiper-pagination-bullet>span').css({ opacity: 1 });
+          })
+          .mouseout(function () {
+            $('.swiper-pagination-bullet>span').css({ opacity: 0 });
+          });
+      });
     </script>
-</body>
+  </body>
 </html>
